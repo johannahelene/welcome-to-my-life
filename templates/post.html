@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Johanna's Life</title>
+    <meta name="description" content="{{ metadata.description if metadata.description else title }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html">Johanna's Cambridge Life</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/index.html">About Me</a></li>
+                    <li><a href="index.html">Life Updates</a></li>
+                    <li><a href="../recipes/index.html">Recipes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Post Content -->
+    <section class="section">
+        <div class="container">
+            <div class="blog-post">
+                <div class="blog-header">
+                    <h1 class="blog-title">{{ title }}</h1>
+                    <p class="blog-date">{{ date }}</p>
+                </div>
+                
+                {% if preview_image %}
+                <img src="../images/{{ preview_image }}" alt="{{ title }}" class="blog-image">
+                {% endif %}
+                
+                <div class="blog-content">
+                    {{ content|safe }}
+                    
+                    {% if metadata.comments %}
+                    <div style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 1.5rem;">
+                        <h3 style="font-size: 1.2rem; color: var(--secondary-color);">Comments</h3>
+                        
+                        {% for comment in metadata.comments %}
+                        <div style="background-color: #f8f9fa; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                            <p style="font-weight: 600; margin-bottom: 0.5rem;">{{ comment.author }}:</p>
+                            <p>{{ comment.text }}</p>
+                            <p style="font-size: 0.8rem; color: #6c757d; margin-top: 0.5rem;">{{ comment.date }} • {{ comment.time }}</p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Posts -->
+    {% if metadata.related_posts %}
+    <section class="section" style="background-color: #f0f5f9; padding-top: 2rem; padding-bottom: 3rem;">
+        <div class="container">
+            <h2 class="section-subtitle" style="text-align: center; margin-bottom: 2rem;">Related Updates</h2>
+            <div class="decorative-divider"></div>
+            
+            <div class="card-grid" style="grid-template-columns: repeat(3, 1fr);">
+                {% for post in metadata.related_posts %}
+                <div class="card">
+                    <div class="card-image" style="background-image: url('../images/{{ post.image }}');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">{{ post.title }}</h3>
+                        <p class="card-date">{{ post.date }}</p>
+                        <a href="{{ post.url }}" class="card-link">Read More</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endif %}
+
+     <!-- Footer -->
+     <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                                <a href="https://johannavw.bsky.social"><i class="fas fa-cloud"></i></a>
+                                <a href="https://www.linkedin.com/in/vonwachs"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/johannahelene"><i class="fab fa-github"></i></a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about/index.html">About</a></li>
+                    <li><a href="blog/index.html">Life Updates</a></li>
+                    <li><a href="recipes/index.html">Recipes</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">&copy; 2025 Johanna's Cambridge Life. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

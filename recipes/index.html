@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Gallery | Johanna's Life</title>
+    <meta name="description" content="A gallery of delicious food I've cooked and eaten recently.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/recipe_gallery.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="../index.html"><span class="sparkle">Johanna's Cambridge Life</span></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about/index.html">About Me</a></li>
+                    <li><a href="../blog/index.html">Life Updates</a></li>
+                    <li><a href="index.html">Food</a></li>
+                    <li><a href="#" onclick="logout(); return false;" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Recipes Section -->
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title"><span class="sparkle">My Food Adventures</span></h1>
+            <div class="decorative-divider"></div>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">Welcome to my culinary corner! Here I share photos of delicious food I've cooked and eaten recently. These are dishes that bring me joy and a taste of home. <span class="sparkle">✨</span></p>
+            <!-- Recipe Gallery - Dynamically populated by JavaScript -->
+            <div id="recipe-gallery" class="card-grid">
+                <!-- Gallery items will be inserted here by JavaScript -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="no-results-message" class="no-results-message">
+                <p>No recipes found in this category. Try selecting a different category.</p>
+            </div>
+            
+            <!-- Pagination -->
+            <div id="pagination" class="pagination-container">
+                <!-- Pagination controls will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+<!-- Recipe Categories -->
+<section class="section" style="background-color: #f0f5f9; padding-top: 2rem; padding-bottom: 3rem;">
+    <div class="container">
+        <h2 class="section-subtitle" style="text-align: center; margin-bottom: 1rem;"><span class="sparkle">Browse My Recipes</span></h2>
+        <div class="decorative-divider"></div>
+        
+        <div class="gallery-controls">
+            <!-- Sort Controls -->
+            <div class="sort-controls">
+                <a href="#" class="sort-button active" data-sort="date-desc">
+                    <i class="fas fa-calendar-alt"></i> Newest First
+                </a>
+                <a href="#" class="sort-button" data-sort="date-asc">
+                    <i class="fas fa-calendar"></i> Oldest First
+                </a>
+                <a href="#" class="sort-button" data-sort="title">
+                    <i class="fas fa-sort-alpha-down"></i> Alphabetical
+                </a>
+            </div>
+            
+            <!-- Category Filters -->
+            <h3 class="section-subtitle" style="text-align: center; font-size: 1.4rem; margin: 1.5rem 0 1rem;"><span class="sparkle">Filter by Category</span></h3>
+            <div class="category-filters">
+                <a href="#" class="category-button active" data-category="all">
+                    <i class="fas fa-th"></i> All Recipes
+                </a>
+                <a href="#" class="category-button" data-category="main-dish">
+                    <i class="fas fa-utensils"></i> Main Dishes
+                </a>
+                <a href="#" class="category-button" data-category="main">
+                    <i class="fas fa-drumstick-bite"></i> Other Mains
+                </a>
+                <a href="#" class="category-button" data-category="snacks">
+                    <i class="fas fa-cookie"></i> Snacks
+                </a>
+                <a href="#" class="category-button" data-category="vegetarian">
+                    <i class="fas fa-seedling"></i> Vegetarian
+                </a>
+            </div>
+    </div>
+</section>
+
+     <!-- Footer -->
+     <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                                <a href="https://johannavw.bsky.social"><i class="fas fa-cloud"></i></a>
+                                <a href="https://www.linkedin.com/in/vonwachs"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/johannahelene"><i class="fab fa-github"></i></a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about/index.html">About</a></li>
+                    <li><a href="blog/index.html">Life Updates</a></li>
+                    <li><a href="recipes/index.html">Food</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">&copy; 2025 Johanna's Cambridge Life. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/recipe_images.js"></script>
+    <script src="../js/recipe_gallery.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

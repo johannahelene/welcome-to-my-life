@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Johanna's Life</title>
+    <meta name="description" content="Login to access Johanna's personal website">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .login-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .login-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 1.5rem;
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .login-form input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+        
+        .login-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .login-button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .login-message {
+            margin-top: 1rem;
+            color: #e74c3c;
+            font-weight: 500;
+            display: none;
+        }
+        
+        .login-decoration {
+            margin: 2rem 0;
+            height: 20px;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264.888-.14 1.652-1.1 2.782-2.752 3.112-4.83.33-2.077-.23-4.27-1.452-5.92C22.507 8.03 20.75 7.1 19.05 7.1c-.566 0-1.115.11-1.64.328-1.652 1.1-2.782 2.75-3.112 4.83-.33 2.077.23 4.27 1.452 5.92 1.225 1.65 2.98 2.57 4.68 2.57.566 0 1.114-.11 1.64-.328zM42.16 20c.366-.13.72-.26.88-.14 1.652-1.1 2.785-2.75 3.115-4.83.33-2.08-.23-4.27-1.453-5.92-1.226-1.65-2.98-2.57-4.68-2.57-.566 0-1.114.11-1.64.33-1.652 1.1-2.782 2.75-3.112 4.83-.33 2.08.23 4.27 1.45 5.92 1.228 1.65 2.983 2.57 4.682 2.57.566 0 1.114-.11 1.64-.33zM63.136 20c.368-.13.72-.26.88-.14 1.653-1.1 2.785-2.75 3.115-4.83.33-2.08-.23-4.27-1.452-5.92-1.226-1.65-2.98-2.57-4.68-2.57-.566 0-1.114.11-1.64.33-1.652 1.1-2.782 2.75-3.112 4.83-.33 2.08.23 4.27 1.452 5.92 1.226 1.65 2.98 2.57 4.68 2.57.566 0 1.114-.11 1.64-.33zM84.136 20c.368-.13.72-.26.88-.14 1.652-1.1 2.784-2.75 3.114-4.83.33-2.08-.23-4.27-1.452-5.92-1.226-1.65-2.98-2.57-4.68-2.57-.566 0-1.114.11-1.64.33-1.652 1.1-2.782 2.75-3.112 4.83-.33 2.08.23 4.27 1.452 5.92 1.226 1.65 2.98 2.57 4.68 2.57.566 0 1.114-.11 1.64-.33z' fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#">Johanna's Cambridge Life</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Login Section -->
+    <section class="section">
+        <div class="container">
+            <div class="login-container">
+                <h2 class="login-title">Welcome</h2>
+                <div class="login-decoration"></div>
+                <form id="login-form" class="login-form">
+                    <input type="password" id="password" placeholder="Enter password" required>
+                    <button type="submit" class="login-button">Enter</button>
+                </form>
+                <p id="login-message" class="login-message">Incorrect password. Please try again.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                <a href="https://johannavw.bsky.social"><i class="fas fa-cloud"></i></a>
+                <a href="https://www.linkedin.com/in/vonwachs"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/johannahelene"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Johanna's Cambridge Life. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

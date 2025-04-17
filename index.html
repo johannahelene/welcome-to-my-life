@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johanna's Life | PhD Student in Bioinformatics</title>
+    <meta name="description" content="Personal website of Johanna, a PhD student in Bioinformatics at Cambridge University, sharing life updates, research insights, and favorite recipes.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Comfortaa:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/recipe_gallery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">Johanna's Cambridge Life</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about/index.html">About Me</a></li>
+                    <li><a href="blog/index.html">Life Updates</a></li>
+                    <li><a href="recipes/index.html">Food</a></li>
+                    <li><a href="#" onclick="logout(); return false;" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Hero Section -->
+    <section class="hero">
+        <div class="uniform-gallery">
+            <!-- Grid cells will be filled dynamically with JavaScript -->
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to My Life</h1>
+            <p>Sharing my life as a PhD student in Bioinformatics at Cambridge University, my research adventures, delicious food I eat and cook along the way, and just what I do in general.</p>
+        </div>
+    </section>
+
+    <!-- Latest Updates Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Latest Updates</h2>
+            <div class="decorative-divider"></div>
+            <div class="card-grid">
+                <!-- Update 1 -->
+                <div class="card">
+                    <div class="card-image" style="background-image: url('images/welcome_to_my_blog.jpg');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Welcome to my Blog</h3>
+                        <p class="card-date">April 05, 2025</p>
+                        <p class="card-excerpt">Hello! I am happy you are here Welcome!</p>
+                        <a href="blog/2025-04-05-welcome-to-my-blog.html" class="card-link">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- Update 2 -->
+                <!-- <div class="card">
+                    <div class="card-image" style="background-image: url('images/cambridge-spring.jpg');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">Spring in Cambridge</h3>
+                        <p class="card-date">March 21, 2025</p>
+                        <p class="card-excerpt">The city is blooming! I took a walk along the River Cam this weekend and captured some beautiful photos of Cambridge in spring that I wanted to share with you all.</p>
+                        <a href="blog/spring-in-cambridge.html" class="card-link">Read More</a>
+                    </div>
+                </div> -->
+                
+                <!-- Update 3 -->
+                <!-- <div class="card">
+                    <div class="card-image" style="background-image: url('images/conference.jpg');"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">My First International Conference</h3>
+                        <p class="card-date">March 14, 2025</p>
+                        <p class="card-excerpt">Last week I attended the International Bioinformatics Summit in London. It was my first time presenting my research to such a large audience, and the experience was incredible!</p>
+                        <a href="blog/first-conference.html" class="card-link">Read More</a>
+                    </div>
+                </div> -->
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="blog/index.html" class="card-link">View All Updates</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Recipes Section -->
+    <section class="section" style="background-color: #f0f5f9;">
+        <div class="container">
+            <h2 class="section-title">Food Lately 💜 ✨</h2>
+            <div class="decorative-divider"></div>
+            <div id="latest-food-gallery" class="card-grid">
+                <!-- Latest food gallery items will be inserted here by JavaScript -->
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="recipes/index.html" class="card-link">View All Food</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Preview Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="decorative-divider"></div>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <img src="images/profile.jpg" alt="Johanna" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                </div>
+                <div style="flex: 2; min-width: 300px;">
+                    <h3 class="section-subtitle handwritten">Hello, I'm Johanna 🤍</h3>
+
+                    <p>I'm a second-year PhD student in Bioinformatics at the European Bioinformatics Institute and the University of Cambridge, and I'm a member of Magdalene College. I left Berlin for my Master's internship in 2022 for 7 months, only to return shortly after in May 2023 to start my PhD.</p>
+                    <p>When I'm not coding, you can find me at the boat house, scrapbooking, or cooking.</p>
+                    <p>I hope you'll enjoy reading about what I'm doing in my day-to-day life...</p>
+                    <a href="about/index.html" class="card-link">Learn More About Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="social-links">
+                                <a href="https://johannavw.bsky.social"><i class="fas fa-cloud"></i></a>
+                                <a href="https://www.linkedin.com/in/vonwachs"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/johannahelene"><i class="fab fa-github"></i></a>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about/index.html">About</a></li>
+                    <li><a href="blog/index.html">Life Updates</a></li>
+                    <li><a href="recipes/index.html">Food</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">&copy; 2025 Johanna's Cambridge Life. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/home_recipe_images.js"></script>
+    <script src="js/latest_recipes.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
